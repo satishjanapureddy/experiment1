@@ -1,0 +1,30 @@
+Having issue while uploading single file to an existing repo
+error loooks like:
+To https://github.com/satishjanapureddy/experiment1.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/satishjanapureddy/experiment1.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+follwed these steps for solving the issue
+
+>>Fetch the latest changes from the remote: Run the following command to fetch the latest changes from the remote repository:
+
+bash
+
+git fetch origin
+
+Merge remote changes into your local branch: Now, merge the fetched changes into your local master branch. You can do this by running:
+
+bash
+
+git pull origin master
+This will bring in any changes from the remote master branch into your local branch. If there are conflicts, Git will alert you, and you'll need to resolve them manually. After resolving any conflicts, commit the changes.
+
+Push your changes: Once the merge is successful (or if there were no changes to pull), you can now push your changes to the remote repository:
+
+bash
+
+git push origin master
