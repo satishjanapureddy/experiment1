@@ -1,0 +1,33 @@
+
+
+.kablammo-name{
+  font-family: "Kablammo", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "MORF" 0;
+    text-align: center;
+
+} 
+
+
+
+.rampart-one-regular {
+    font-family: "Rampart One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: justify;
+    text-decoration-color: aqua;
+    line-height:200%;
+    font-size: 1rem;
+    
+    
+      }
+      
+   li:nth-child(2n-1){
+    color: blue;
+   }
+   li:hover{
+    color:chartreuse;
+   }
