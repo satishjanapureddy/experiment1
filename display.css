@@ -1,0 +1,38 @@
+#container{
+    height: 800px;
+    background-color: rgba(240, 128, 184, 0.199);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+.block{
+    height:100px;
+    width:100px;
+    animation-name: example;
+    animation-duration: 15s;
+
+}
+.block:hover{
+    animation-name: example;
+    animation-duration: 15s;
+
+}
+
+@keyframes example{
+    from{
+        transform: rotate(0deg);
+        height:100px;
+        width:100px;
+        
+    }
+    to{
+        transform: rotate(360deg);
+        height:1000px;
+        width:1000px;
+        text-decoration-color: blue;
+    }
+    
+}
+    

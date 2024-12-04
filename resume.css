@@ -1,0 +1,157 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* Body and page styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: darkorange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.resume-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Style for each card */
+.card {
+    width: 350px;
+    height: 400px;
+    perspective: 1000px; /* This creates a 3D effect */
+    animation-name: example;
+    animation-duration: 15s;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 15s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+   
+        transform: rotateY(180deg);
+        
+        
+    
+   
+}
+
+/* Front of the card */
+.card-front {
+    background-color: greenyellow;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+/* Back of the card (revealed on hover) */
+.card-back {
+    background-color:whitesmoke;
+    border-radius: 10px;
+    padding: 20px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Prevents back content from showing when flipped */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333333;
+    transform: rotateY(180deg);
+    font-family: 'Arial', sans-serif; /* Set the font family */
+    text-align: left; /* Align text to the left */
+    line-height: 1.5; /* Set line height for readability */
+    padding: 20px; /* Add some space around the text */
+}
+
+/* Styling for links and lists on the back */
+.card-back ul {
+    list-style-type: none;
+}
+
+.card-back ul li {
+    margin: 10px 0;
+}
+
+.card-back a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.card-back a:hover {
+    text-decoration: underline;
+}
+@keyframes example{
+    from{
+        transform: rotate(0deg);
+        height:350px;
+        width:400px;
+        
+    }
+    to{
+        transform: rotate(360deg);
+        height:50px;
+        width:400px;
+        
+    }
+    
+}
+
+
+
+/* Add color styles to different elements inside .card-back */
+
+/* Change color of text on the back */
+.card-back p, .card-back ul {
+    color: #333; /* Text color for paragraphs and unordered lists */
+}
+
+/* List item styling */
+.card-back ul li {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555; /* Change color of individual list items */
+}
+
+/* Styling for links */
+.card-back a {
+    text-decoration: none;
+    color: #007bff; /* Blue color for links */
+    font-weight: bold; /* Make the links bold */
+}
+
+/* Hover effect for links */
+.card-back a:hover {
+    text-decoration: underline;
+    color: #0056b3; /* Darker blue on hover */
+}
+
+/* Optional: Make text color red or green for different sections */
+.card-back .contact-info {
+    color: #e74c3c; /* Red color for Contact Information section */
+}
+
+.card-back .skills-info {
+    color: #148543; /* Green color for Skills section */
+}
